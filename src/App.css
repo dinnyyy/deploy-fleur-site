@@ -138,5 +138,6 @@ h3 {
 
 .show-button {
   position: relative;
-  left: 130px;
+  left: 10px;
+  width: 400px;
 }

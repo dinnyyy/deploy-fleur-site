@@ -10,9 +10,6 @@ import "reactjs-popup/dist/index.css";
 
 export function TimelinePage() {
   const [clicked, setClicked] = useState(false);
-  const handleButtonPress = () => {
-    setClicked(!clicked);
-  };
 
   return (
     <div>
