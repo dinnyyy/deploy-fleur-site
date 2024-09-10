@@ -141,3 +141,25 @@ h3 {
   left: 10px;
   width: 400px;
 }
+
+.coupon-div {
+  position: fixed;
+  top: 50%;
+  left: 40%;
+  width: 500px;
+  height: 200px;
+  background-color: white;
+  margin-top: -100px; /* Half of the child's height */
+  margin-left: -100px;
+  color: black;
+  text-align: center;
+  align-items: center;
+  padding: 50px;
+  border: solid black 10px;
+}
+
+.coupon-button {
+  margin-top: 40px;
+  background-color: red;
+
+}
