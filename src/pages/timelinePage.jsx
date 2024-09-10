@@ -4,12 +4,10 @@ import {
   VerticalTimelineElement,
 } from "react-vertical-timeline-component";
 import "react-vertical-timeline-component/style.min.css";
-import { useState } from "react";
 import Popup from "reactjs-popup";
 import "reactjs-popup/dist/index.css";
 
 export function TimelinePage() {
-  const [clicked, setClicked] = useState(false);
 
   return (
     <div>
