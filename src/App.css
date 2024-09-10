@@ -80,3 +80,63 @@ h3 {
 
   border-radius: 24px;
 }
+
+.popup {
+  width: 200px;
+ position: fixed;
+ top:auto;
+ bottom:0px;
+ right:0px;
+ left:auto;
+}
+
+.modal {
+  font-size: 12px;
+  color: white;
+  
+}
+.modal > .header {
+  width: 100%;
+  border-bottom: 1px solid white;
+  font-size: 30px;
+  font-weight: bold;
+  text-align: center;
+  padding: 5px;
+  color: white;
+}
+.modal > .content {
+  width: 100%;
+  padding: 10px;
+  margin-top: 20px;
+  margin-bottom: 10px;
+  font-size: 18px;
+}
+.modal > .actions {
+  width: 100%;
+  padding: 10px 5px;
+  margin: auto;
+  text-align: center;
+}
+.modal > .close {
+  cursor: pointer;
+  position: absolute;
+  display: block;
+  padding: 2px 5px;
+  line-height: 20px;
+  right: -10px;
+  top: -10px;
+  font-size: 24px;
+  background: #ffffff;
+  border-radius: 18px;
+  border: 1px solid #cfcece;
+}
+
+.wrapperpop {
+  border-radius: 20px;
+  background-color: gray;
+}
+
+.show-button {
+  position: relative;
+  left: 130px;
+}

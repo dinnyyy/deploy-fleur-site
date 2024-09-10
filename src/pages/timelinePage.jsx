@@ -4,9 +4,16 @@ import {
   VerticalTimelineElement,
 } from "react-vertical-timeline-component";
 import "react-vertical-timeline-component/style.min.css";
-import { ShowMessageButton } from "./buttonPress";
+import { useState } from "react";
+import Popup from "reactjs-popup";
+import "reactjs-popup/dist/index.css";
 
 export function TimelinePage() {
+  const [clicked, setClicked] = useState(false);
+  const handleButtonPress = () => {
+    setClicked(!clicked);
+  };
+
   return (
     <div>
       <h1 className="title">Our first 6</h1>
@@ -40,12 +47,36 @@ export function TimelinePage() {
                   padding: 20,
                 }}
               />
-              <ShowMessageButton description={element.description} />
+              <Popup
+                trigger={<button className="show-button">Show Message</button>}
+                modal
+                contentStyle={{backgroundColor: 'rgb(222, 170, 255)', borderRadius: '20px', padding:'30px', border: 'none'}}
+                
+              >
+                {(close) => (
+                  <div className="modal">
+                    <div className="header">{element.title}</div>
+                    <div className="content">
+                      {element.description}
+                    </div>
+                    <div className="actions">
+                      <button
+                        className="button"
+                        onClick={() => {
+                          console.log("modal closed ");
+                          close();
+                        }}
+                      >
+                        Hide message
+                      </button>
+                    </div>
+                  </div>
+                )}
+              </Popup>
             </VerticalTimelineElement>
           );
         })}
       </VerticalTimeline>
     </div>
-
   );
 }
